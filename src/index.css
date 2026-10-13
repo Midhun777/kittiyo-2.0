@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ───────────────────────────────────────── */
+@theme {
+  --color-ivory: #FAF7F2;
+  --color-ivory-warm: #F5F0E8;
+  --color-charcoal: #2C2C2C;
+  --color-charcoal-light: #4A4A4A;
+  --color-burnt-orange: #C1663A;
+  --color-burnt-orange-hover: #A8552F;
+  --color-burnt-orange-light: #E8D5CA;
+  --color-olive: #6B7C5E;
+  --color-olive-light: #D4DCC9;
+  --color-warm-grey: #D5CFCA;
+  --color-warm-grey-light: #E8E4DF;
+  --color-error: #B54A4A;
+  --color-error-light: #F2D9D9;
+
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+}
+
+/* ─── Base ────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Focus styles ────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-burnt-orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Reduced motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Decorative marks ────────────────────────────────────── */
+.decorative-arrow {
+  display: inline-block;
+  color: var(--color-warm-grey);
+  font-size: 1.25rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.paper-edge {
+  border-top: 1px solid var(--color-warm-grey-light);
+  position: relative;
+}
+
+.paper-edge::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 1.5rem;
+  width: 2.5rem;
+  height: 1px;
+  background-color: var(--color-burnt-orange-light);
+}
