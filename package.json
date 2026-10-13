@@ -4,7 +4,7 @@
   "description": "Move words between devices. Paste text or a link, get a 6-digit code.",
   "private": true,
   "scripts": {
-    "dev": "echo \"Run 'npm run dev:api' and 'npm run dev:frontend' in two separate terminals\"",
+    "dev": "node scripts/dev.js",
     "dev:api": "node server.dev.js",
     "dev:frontend": "npx vite",
     "build": "npx vite build",
